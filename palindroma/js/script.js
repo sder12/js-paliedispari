@@ -11,11 +11,11 @@ Creare una funzione per capire se la parola inserita è palindroma.
 const userWord = prompt("Scrivi una parola");
 console.log(userWord);
 
-const reverseWord = userWord.split('').reverse('').join('')
-console.log(reverseWord)
+const reverseWord = userWord.split('').reverse('').join('');
+console.log(reverseWord);
 
 const userPalindroma = isWordPalindroma(userWord);
-console.log(userPalindroma)
+console.log(userPalindroma);
 
 
 
@@ -34,5 +34,7 @@ function isWordPalindroma(word){
         return false;
     }
 }
+
+
 
 
