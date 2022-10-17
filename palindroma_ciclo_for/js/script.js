@@ -8,7 +8,7 @@ const userWord = prompt("Dimmi una parola");
 console.log(userWord);
 
 //PROCESSING
-const userWordResult = isPalindroma(userWord);
+const userWordResult = isPalindromaII(userWord);
 console.log(userWordResult);
 
 //OUTPUT
@@ -20,19 +20,39 @@ if (userWordResult) {
 
 /**
 //  * Description Verificare se una parola è palindroma o meno
-//  * Scomporre la parola 
+//  * Scomporre la parola USO ARRAY
 //  * @param {string} word
 //  * @returns {boolean} true se è palindroma 
 //  */
 function isPalindroma(word) {
   let arrayBack = [];
-  for (let j = userWord.length - 1; j >= 0; j--) {
+  for (let j = word.length - 1; j >= 0; j--) {
     arrayBack.push(word[j]);
   }
   let arrayBackJoin = arrayBack.join('');
 
   let isPalindroma = false;
   if (word === arrayBackJoin) {
+    isPalindroma = true;
+  }
+  return isPalindroma;
+}
+
+
+
+/**
+//  * Description Verificare se una parola è palindroma o meno
+//  * Scomporre la parola CONCATENO
+//  * @param {string} word
+//  * @returns {boolean} true se è palindroma 
+//  */
+function isPalindromaII(word) {
+  let reverseWord = "";
+  for (let j = word.length - 1; j >= 0; j--) {
+    reverseWord += word[j]
+  }
+  let isPalindroma = false;
+  if (word === reverseWord) {
     isPalindroma = true;
   }
   return isPalindroma;
